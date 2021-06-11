@@ -1,11 +1,11 @@
 import java.util.Scanner;
 public class MathCal {
-		static int num;
-		static int num2;
-		static char sym;
+	
 	
 	public static void main(String[] args) {
-	
+		 int num;
+		 int num2;
+		 char sym;
 		Scanner scan = new Scanner(System.in);
 		
 		while(true) {
@@ -17,13 +17,17 @@ public class MathCal {
 	 System.out.println("What would  you do like to do with these numbers?");
 	 sym = scan.next().charAt(0);
 	 switch (sym) {
-	 case '+': add();
+	 case '+': 
+		 System.out.println(add(num, num2));
 	 break;
-	 case '-':subtract();
+	 case '-':
+		 System.out.println(subtract(num, num2)); 
 	 break;
-	 case '*': multiply();
+	 case '*': 
+		System.out.println(multiply(num, num2));
 	 break;
-	 case '/': division();
+	 case '/': 
+		System.out.println(division(num, num2)) ;
 	 break;
 	 case '0': 
 		 scan.close();
@@ -32,17 +36,21 @@ public class MathCal {
 		}
 	}
 	
-	public static void add() {
-		System.out.println(num + num2);
+	public static int add(int num, int num2) {
+		int sum = num + num2;
+		return sum;
 	}
-	public static void subtract() {
-		System.out.println(num - num2);
+	public static int subtract(int num, int num2) {
+		int sum = num - num2;
+		return sum;
 	}
-	public static void multiply() {
-		System.out.println(num * num2);
+	public  static int multiply(int num, int num2) {
+		int sum = num * num2;
+		return sum;
 	}
-	public static void division() {
-		System.out.println(num * num2);
+	public static int division(int num, int num2) {
+		int sum = num / num2;
+		return sum;
 	}
 	
 	
